@@ -66,7 +66,7 @@ Once Logged in we can verify we are logged in and the user, if we send a get req
 
 
 ## Issue 
-    This represents a business feature that needs implementation, they will provide a short title and a description. All issues gets added to the “To Do” list as unassigned
+This represents a business feature that needs implementation, they will provide a short title and a description. All issues gets added to the “To Do” list as unassigned
 ```
     curl -X POST -H "Content-Type: application/json" \
     -d '{"type":"issue", "title": "send Message", "description":"Let pilots send messages to Central"}' \
@@ -75,7 +75,7 @@ Once Logged in we can verify we are logged in and the user, if we send a get req
 
 
 ## Bug 
-    This represents a problem that needs fixing. They will only provide a description, the title needs to be randomized with the following pattern: bug-{word}-{number}. It doesn't matter that they repeat internally. The bugs should be assigned to a random member of the board and have the “Bug” label.
+This represents a problem that needs fixing. They will only provide a description, the title needs to be randomized with the following pattern: bug-{word}-{number}. It doesn't matter that they repeat internally. The bugs should be assigned to a random member of the board and have the “Bug” label.
 ```
     curl -X POST -H "Content-Type: application/json" \
     -d '{"type":"bug", "description":"Cockpit is not depressurizing correctly"}' \
@@ -84,7 +84,7 @@ Once Logged in we can verify we are logged in and the user, if we send a get req
 
 
 ## Task
-    This represents some manual work that needs to be done. It will count with just a title and a category (Maintenance, Research, or Test) each corresponding to a label in trello. 
+This represents some manual work that needs to be done. It will count with just a title and a category (Maintenance, Research, or Test) each corresponding to a label in trello. 
 ```
     curl -X POST \
     -H "Content-Type: application/json" \
