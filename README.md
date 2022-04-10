@@ -48,7 +48,7 @@ To Close it just press Ctrl-C
 ## Loggin in
 
 **Configuration**
-Inside the folder config_files we have the file config.json that can store the key, token and board_id. Keep in mind this will remain visible.
+Inside the folder config_files we have the file config.json that can store the key, token and board_id. Keep in mind this will remain visible. Changes to this file will only take effect when the server is started.
 
 **Browser**
 From a browser the endpoint http://localhost:3000/login will provide us with a form where we can input the Key, Token and Board_Id
@@ -62,12 +62,11 @@ We can directly log in if we send a POST request through cURL
 ```
 
 **Verify Log in**
-Once Logged in we can verify the user we are logged in with if send a get request to http://localhost:3000, if we are not logged in we will get a message propting us to log in using the browser or post request
+Once Logged in we can verify we are logged in and the user, if we send a get request to http://localhost:3000, if not logged in it will trow a message prompting you to log in using the browser or post request.
 
 
 ## Issue 
     This represents a business feature that needs implementation, they will provide a short title and a description. All issues gets added to the “To Do” list as unassigned
-
 ```
     curl -X POST -H "Content-Type: application/json" \
     -d '{"type":"issue", "title": "send Message", "description":"Let pilots send messages to Central"}' \
