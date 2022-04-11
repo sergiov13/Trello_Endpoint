@@ -173,6 +173,7 @@ def get_list_id(lists, selection):
             return trello_list["id"]
     return None
 
+
 def publish_to_trello(session,params_data):
     '''
         Handles all creations of cards from previously setted parameters

@@ -1,13 +1,12 @@
 import logging
-import json
-from plistlib import load
-import requests
 from flask import Flask, request, render_template
-from resources.utils import load_credentials, trello_login, issue, bug, task, load_session
+from resources.utils import load_credentials,  issue, bug, task, load_session
 from resources.session import Session
+
 
 LOG = logging.getLogger(__name__)
 app = Flask(__name__)
+
 
 '''
     Handles the routing to create cards and verifies log in before creating a card
