@@ -1,5 +1,5 @@
 # Trello Endpoint Challenge
-This is an endpoint to add Trello cards to a specified board.
+This is an endpoint to add Trello cards to a specific board.
 We are assuming the Lists "To Do", "Bug", "Task" already exist in the Trello Board.
 Currently there is only the functionality for one account to be used, and all cards will be created through this user. This could be fixed with cookies or server side sessions creating instances for every new connection, allowing for multiple users.
 
@@ -11,7 +11,7 @@ Currently there is only the functionality for one account to be used, and all ca
     **flask** \\
     **requests** 
 
-First we need to install pipenv if not installed this will handle our virtual environment and install dependencies. From terminal while being inside the project folder we run the command:
+First we need to install pipenv if not installed, this will handle our virtual environment and install dependencies. From terminal while being inside the project folder we run the command:
 ```
     pip install pipenv
 ```
@@ -19,7 +19,7 @@ Once finished well created the virtual enviroment:
 ```
     pipenv shell
 ```
-After we have our virtual enviroment created will install dependencies specified in pipfile, this will create out pipfile.lock.
+After we have our virtual enviroment created we will install dependencies specified in pipfile, this will create out pipfile.lock.
 ```
     pipenv install
 ```
@@ -31,21 +31,21 @@ To Close it just press Ctrl-C
 
 
 ## Creating and running Dockerfile 
-You'll need to have Docker installed.
+You'll need to have Docker and/or docker-compose installed.
 
 while standing in the root project folder run:
 ```
-    docker-compose build
+    docker-compose build // docker build
 ```
 Once finished building the container run the command:
 ```
-    docker-compose start
+    docker-compose start // docker run 
 ```
 To Close it just press Ctrl-C
 
-*NOTE*: If the config_file is changed in order for those changes to take effect we must first bring down the container if its running and rebuild it.
+*NOTE*: If the config_file is changed in order for those changes to take effect we must first bring down the container if its running and rebuild it and run it again.
 
-## Loggin in
+## Log in
 
 **Configuration**
 Inside the folder config_files we have the file config.json that can store the key, token and board_id. Keep in mind this will remain visible. Changes to this file will only take effect when the server is started.
@@ -62,7 +62,7 @@ We can directly log in if we send a POST request through cURL
 ```
 
 **Verify Log in**
-Once Logged in we can verify we are logged in and the user, if we send a get request to http://localhost:3000, if not logged in it will trow a message prompting you to log in using the browser or post request.
+Once Logged in we can verify we are logged in and the user being used, if we send a get request to http://localhost:3000 and we are not logged in it will trow a message prompting you to log in using the browser or post request.
 
 
 ## Issue 
